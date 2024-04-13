@@ -18,7 +18,7 @@ resize_option_list = ResizeOption.list_resize_options()
 class ControlNetTrtBase:
     image: Image = None
     preprocessor: str = None
-    resize_option: str = ResizeOption.CROP
+    resize_option: str = str(ResizeOption.CROP)
     model_id: str = None
     hf_id: str = None
     model: str = None

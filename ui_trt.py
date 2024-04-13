@@ -271,7 +271,7 @@ def get_lora_checkpoints():
                 os.path.join(cmd_opts.lora_dir, filename)
             )
         else:
-            print(
+            logging.info(
                 """LoRA {} is not a safetensor. This might cause issues when exporting to TensorRT.
                    Please ensure that the correct base model is selected when exporting.""".format(
                     name
@@ -289,7 +289,7 @@ def get_lora_checkpoints():
 
         else:
             version = SDVersion.Unknown
-            print(
+            logging.info(
                 "No config file found for {}. You can generate it in the LoRA tab.".format(
                     name
                 )
